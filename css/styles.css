@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+}
+
+.calc-block {
+  display: flex;
+  align-items: center;
+}
+
+h3 {
+  width: 672px;
+  height: 79px;
+
+  font-size: 72px;
+  line-height: 79px;
+
+  color: #373A3C;
+}
+
+.calc-block p {
+  margin: 0;
+  padding: 0;
+
+  width: 189px;
+  height: 24px;
+
+  font-size: 24px;
+  line-height: 24px;
+  color: #373A3C;
+}
+
+#input {
+  width: 86px;
+  height: 38px;
+
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#button {
+  width: 39px;
+  height: 38px;
+  background: #0275D8;
+  border: 1px solid #0275D8;
+  border-radius: 4px;
+  margin-left: 15px;
+
+  font-size: 16px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+
+#button:disabled {
+  cursor: not-allowed;
+}
+
+#output {
+  width: 28px;
+  height: 24px;
+  margin-left: 15px;
+
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+  text-decoration-line: underline;
+  color: #373A3C;
+}
+
+#error {
+  width: 277px;
+  height: 24px;
+  margin-left: 15px;
+
+  font-size: 16px;
+  line-height: 24px;
+  color: #D9534F;
+}
+
+@keyframes spin {
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.loading1, .loading2 {
+  display: none;
+  width: 52px;
+  height: 40px;
+  border-radius: 50%;
+
+  animation: spin 1s ease-in-out infinite;
+}
+
+.show {
+  display: block;
+}
+
+#lengthErr {
+  margin-top: 5px;
+  margin-left: 95px;
+  width: 180px;
+  height: 30px;
+  text-align: center;
+
+  background: #F2DEDE;
+  border: 1px solid #EBCCCC;
+  border-radius: 4px;
+
+  font-size: 16px;
+  line-height: 24px;
+  color: #A94442;
+}
+
+.checkbox-container {
+  width: 180px;
+  height: 40px;
+
+  font-size: 16px;
+  line-height: 24px;
+  color: #373A3C;
+}
+
+.results {
+  display: flex;
+  align-items: center;
+}
+
+.results-header {
+  width: 182px;
+  height: 72px;
+
+  font-size: 54px;
+  line-height: 72px;
+  color: #373A3C;
+}
+
+.results-list {
+  width: 1088px;
+  height: 24px;
+
+  font-size: 24px;
+  line-height: 24px;
+  color: #373A3C;
+}
+
+.separator {
+  width: 1088px;
+  height: 0px;
+  border: 1px solid #000000;
+}
+
+#sort {
+  width: 122px;
+  height: 38px;
+
+  background: #E6E6E6;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+
+  font-size: 16px;
+  line-height: 21px;
+  color: #373A3C;
+}

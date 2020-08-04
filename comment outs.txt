@@ -1,0 +1,70 @@
+// feedback from Kru
+/* function tellStory(){
+    turnOnSpinner();
+    fetchFuntion();
+    turnOffSpinner();
+    showResult();
+  } */
+
+// function calculating fibonacci localy
+  /* function fibonacciLocal(x) {
+    let prvFirst = 0, prvSecond = 1, next = 1;
+    for (let i = 2; i <= x; i++) {
+      next = prvFirst + prvSecond;
+      prvFirst = prvSecond;
+      prvSecond = next;
+    }
+    return next;
+  }; */
+
+  // function that fetches server for previous calculations list
+  /* function getCalculationsList() {
+    let { spiner2 } = fibonacciStore;
+
+    spiner2.classList.add("show");
+    let newResults = '';
+
+    fetch("http://localhost:5050/getFibonacciResults")
+      .then((response) => {
+        return response.json(); 
+      })
+      .then((data) => {
+        data.results.map((item) => {
+          for (let key in item) {
+            newResults += `<p>The Fibonacci Of ${item.number} is ${item.result}. 		Calculated at: ${new Date(item.createdDate).toString()}		</p><hr>`;
+            return newResults;
+          }
+        }).join("\n");
+
+        spiner2.classList.remove("show");
+        document.querySelector('.results-list').innerHTML += newResults;
+      });
+  }; */
+
+  // function calculating fibonacci on server
+  /* function fibonacciServer() {
+    let { input, output, error, spiner1 } = fibonacciStore;
+    let inputValue = input.value;
+    output.style.display = 'none';
+    error.style.display = 'none';
+    spiner1.classList.add("show");
+
+    fetch(`http://localhost:5050/fibonacci/${inputValue}`)
+      .then((response) => {
+        if (!response.ok) {
+          return response.text()
+            .then((response) => {
+              error.style.display = 'block';
+              document.getElementById('error').innerText = response;
+              console.log(response)
+            });
+        } else {
+          return response.json();
+        }
+      })
+      .then((data) => {
+        spiner1.classList.remove("show");
+        output.innerText = data.result;
+        output.style.display = 'block';
+      });
+  } */

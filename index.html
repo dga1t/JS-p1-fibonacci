@@ -1,0 +1,73 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Fibonacci</title>
+  <meta name="description" content="Project Name">
+  <meta name="author" content="Fill in your name">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+  <div class="main-wrapper">
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col">
+          <h3>Fibonacci Calculator</h3>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col">
+          <div class="calc-block">
+            <p>The Fibonacci Of</p>
+            <input id="input" type="number" name="input" max="50">
+            <button id="button">Is</button>
+            <p id="output" style="display:none"></p>
+            <p id="error" style="display:none"></p>
+            <img class="loading1" src="./loading.png" alt="loading icon"/>
+          </div>
+          <div id="lengthErr" style="visibility:hidden">
+            <p>Can't be larger than 50</p>
+          </div>
+          <div class="checkbox-container">
+            <form action="">
+              <label for="check"><input type="checkbox" name="checkbox" id="check"/> Save Calculation</label>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col results">
+          <div class="results-header">Results</div>
+          <img class="loading2" src="./loading.png" alt="loading icon"/>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col mt-4">
+          <div id="sort-container">
+            <form id="sort-form" action="">
+              <label for="sort"></label>
+              <select id="sort" name="sort">
+                <option value="">date asc</option>
+                <option value="">date des</option>
+                <option value="">num asc</option>
+                <option value="">num des</option>
+              </select>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col mt-4">
+          <div class="results-container"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/scripts.js"></script>
+
+</body>
+</html>
